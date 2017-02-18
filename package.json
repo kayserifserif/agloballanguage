@@ -1,0 +1,23 @@
+{
+  "name": "etymologee",
+  "version": "1.0.0",
+  "description": "explore etymologies of the English language!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bookwormgirl910/etymologee.git"
+  },
+  "author": "Katherine Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bookwormgirl910/etymologee/issues"
+  },
+  "homepage": "https://github.com/bookwormgirl910/etymologee#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "xml2js": "^0.4.17"
+  }
+}
