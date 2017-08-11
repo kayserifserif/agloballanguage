@@ -1,10 +1,11 @@
 {
   "name": "etymologee",
   "version": "1.0.0",
-  "description": "explore etymologies of the English language!",
+  "description": "Explore etymologies of the English language!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/bookwormgirl910/etymologee#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.1",
+    "morgan": "^1.8.2",
+    "serve-favicon": "^2.4.3",
     "xml2js": "^0.4.17"
   }
 }
