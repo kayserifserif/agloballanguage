@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
 	var getInfo = function() {
-		var entry = $(".entry").val();
-		console.log(entry)
+		var entry = $(".box").val();
+		console.log(entry);
 		if(entry == "") {
-			$(".info").prepend("<p class='loading'>Please enter a word.</p>")
+			// $(".info").prepend("<p class='loading'>Please enter a word.</p>")
 		} else {
 			$.ajax({
 				type: "GET",
@@ -16,7 +16,7 @@ $(document).ready(function() {
 	}
 
 	$(".search-btn").click(getInfo());
-	$(".entry").keyup(function(event) {
+	$(".box").keyup(function(event) {
 		if(event.keyCode == 13) {
 			getInfo();
 		}

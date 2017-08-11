@@ -9,14 +9,27 @@
 </head>
 
 <body>
-	<span class="instruct">Enter a word to look up.</span>
 	<div class="search">
-		<input type="text" name="entry" class="entry" autofocus />
-		<button type="submit" name="search" class="search-btn">Look up</button>
+		<p class="welcome">Enter a word to look up.</p>
+		<div class="entry">
+			<input type="text" name="box" class="box" autofocus />
+			<button type="submit" name="search" class="search-btn">Look up</button>
+		</div>
 	</div>
-	<div class="info">
-		<h2 class="word"></h2>
-	</div>
+	<article class="info">
+		<dl class="result">
+			<dt class="word">ketchup</dt>
+			<dd class="definition">a seasoned pureed condiment usually made from tomatoes</dd>
+			<dd class="etymology">1705-15; &lt; Malay kəchap fish sauce, perhaps &lt; dialectal Chinese kéjāp (Guangdong) or ke-tsiap (Xiamen), akin to Chinese qié eggplant + chī juice</dd>
+			<dd class="date">1707&ndash;15</dd>
+		</dl>
+		<div class="vis">
+			<div class="history">
+			</div>
+			<div class="geography">
+			</div>
+		</div>
+	</article>
 
 	<script src="js/scripts.js"></script>
 </body>

@@ -8,6 +8,10 @@ f_heading = 'Montserrat 24 bold'
 f_body = 'Merriweather 14 normal'
 f_small = 'Merriweather 12 normal' */
 
+/****
+SITE 
+****/
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -17,38 +21,47 @@ html, body {
 
 body {
 	background-color: #7ccdb9;
-	font-family: Merriweather, Georgia, serif;
+	font-family: "Merriweather", "Georgia", serif;
+	color: #475451;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Montserrat, Avenir, Futura, Helvetica, sans-serif;
+	font-family: "Montserrat", "Avenir", "Futura", "Helvetica", sans-serif;
 }
 
 a {
 	text-decoration: none;
 }
 
-.instruct {
-	display: block;
-	margin: 3em auto 0;
+/****
+SEARCH PAGE
+****/
+
+.welcome {
 	text-align: center;
 	color: #fff;
-	font-size: 16px;
+	font-size: 1em;
 }
 
 .search {
 	display: flex;
-	margin: 2em auto;
+	flex-direction: column;
 	justify-content: center;
+	margin: 3em auto;
 }
 
 .entry {
+	display: flex;
+	justify-content: center;
+}
+
+.box {
 	padding: 1em;
 	width: 30%;
 	background-color: #46b79b;
 	border: none;
 	outline: none;
-	font-family: Merriweather, Georgia, serif;
+	font-family: "Merriweather", "Georgia", serif;
 	color: #fff;
 	font-size: 1em;
 	text-align: center;
@@ -58,8 +71,8 @@ a {
 	padding: 1em 1.2em;
 	color: #fff;
 	background-color: #5f5f5f;
-	font-family: Montserrat, Avenir, Futura, Helvetica, sans-serif;
-	font-size: 16px;
+	font-family: "Montserrat", "Avenir", "Futura", "Helvetica", sans-serif;
+	font-size: 1em;
 	font-weight: bold;
 	text-transform: uppercase;
 	border: 0;
@@ -73,4 +86,25 @@ a {
 .loading {
 	text-align: center;
 	color: #fff;
+}
+
+.info {
+	width: 50%;
+	margin: auto;
+}
+
+.result {
+	text-align: center;
+}
+
+.result .word {
+	margin-bottom: 1em;
+	font-family: "Montserrat", "Avenir", "Futura", "Helvetica", sans-serif;
+	font-weight: bold;
+	font-size: 2em;
+	color: #fff;
+}
+
+.result dd {
+	margin: 0 0 1em 0;
 }
