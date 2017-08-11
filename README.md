@@ -27,4 +27,4 @@ npm start
 
 ## Implementation
 
-Currently using data from the [Merriam-Webster Dictionary API](http://dictionaryapi.com/ "Merriam-Webster Dictionary API"), but hoping to figure out how to use the Etymological Wordnet project to expand the scope of the project.
+Currently using data from the [Merriam-Webster Dictionary API](http://dictionaryapi.com/ "Merriam-Webster Dictionary API"), but hoping to figure out how to use the [Etymological Wordnet](http://www1.icsi.berkeley.edu/~demelo/etymwn/ "Etymological Wordnet") project to expand the scope of the project.
