@@ -10,7 +10,13 @@ Etymology is often thought of as a topic for scholars of "dead languages". In so
 
 The aim of this project is to bring the field of etymology out of the traditional and inherent text-based presentation format on to the web. Through demonstrating meaningful insights into words, discovering interesting relationships between words, and displaying all information visually and graphically, the hope is to create an accessible and innovative way to explore the English language.
 
-For further exploration, the [Online Etymology Dictionary](http://www.etymonline.com/index.php "Online Etymology Dictionary") is highly recommended, and books such as *The Meaning of Everything: The Story of the Oxford English Dictionary* by Simon Winchester are an interesting read as well.
+### Links
+
+For further exploration, check out:
+* [Online Etymology Dictionary](http://www.etymonline.com/index.php "Online Etymology Dictionary")
+* [WordNet](http://wordnet.princeton.edu/ "WordNet")
+* [Dictionary.com](http://www.dictionary.com/ "Dictionary.com")
+* *The Meaning of Everything: The Story of the Oxford English Dictionary* by Simon Winchester
 
 ## Setup
 
