@@ -16,7 +16,7 @@ For further exploration, check out:
 * [Online Etymology Dictionary](http://www.etymonline.com/index.php "Online Etymology Dictionary")
 * [WordNet](http://wordnet.princeton.edu/ "WordNet")
 * [Dictionary.com](http://www.dictionary.com/ "Dictionary.com")
-* *The Meaning of Everything: The Story of the Oxford English Dictionary* by Simon Winchester
+* *[The Meaning of Everything: The Story of the Oxford English Dictionary](https://www.goodreads.com/book/show/155396.The_Meaning_of_Everything)* by Simon Winchester
 * [Etytree](https://meta.wikimedia.org/wiki/Grants:IEG/A_graphical_and_interactive_etymology_dictionary_based_on_Wiktionary "Etytree")
 
 ## Setup
