@@ -2,4 +2,14 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  
+  form(action="input" method="post")
+    label(for="word") Enter a word to look up: 
+    input(type="text" name="word" id="name")
+    input(type="submit" value="Look up")
+
+  div(class="entry")
+    h2= entry.word
+    p(class="definition")= entry.definition
+    p(class="date")= entry.date
+    p(class="etymology")= entry.etymology
