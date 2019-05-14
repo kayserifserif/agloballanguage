@@ -29,6 +29,7 @@ router.get('/', function(req, res, next) {
     resp.pipe(
       concat(function(buffer) {
         var str = buffer.toString();
+        console.log(str);
         parser.parseString(str, function(err, result) {
           var entry_list = result.entry_list;
           var entries = entry_list.entry;
@@ -36,7 +37,11 @@ router.get('/', function(req, res, next) {
           var ew = first_entry.ew[0];
           // console.log('Word: ' + word);
           var et = first_entry.et[0];
-          // console.log('Etymology: ' + util.inspect(et));
+          var et_str = "";
+          for (var key in et) {
+            et_str += et[key] + " ";
+          }
+          // console.log('Etymology: ' + et_str);
           var def = first_entry.def[0];
           var date = def.date[0];
           // console.log('Date: ' + date);
@@ -44,7 +49,7 @@ router.get('/', function(req, res, next) {
           // console.log('Definition: ' + util.inspect(dt));
 
           entry["word"] = ew;
-          entry["etymology"] = et;
+          entry["etymology"] = et_str;
           entry["date"] = date;
           entry["definition"] = dt;
         });
