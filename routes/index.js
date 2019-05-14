@@ -6,58 +6,34 @@ var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
 var concat = require('concat-stream');
 var util = require('util');
+// var request = require('request');
+
+const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');
 
 var word = 'ketchup';
-var entry = {"word":"", "etymology":"", "date":null, "definition":""};
+var entry = {"word": "", "etymology": "", "date": null, "definition": ""};
 
 parser.on('error', function(err) {
   console.log('Parser error', err);
 });
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+var getResults = function(req, res) {
 
-  var url = 'https://www.dictionaryapi.com/api/v1/references/collegiate/xml/' +
+  var url = 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/' +
   word + '?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1';
-
-  https.get(url, function(resp) {
-
-    resp.on('error', function(err) {
-      console.log('Error while reading', err);
+  
+  https.get(url, (res) => {
+    res.on('data', (d) => {
+      var jsonObject = JSON.parse(d);
+      var first_entry = jsonObject[0];
+      entry["word"] = first_entry["meta"]["id"];
+      entry["definition"] = first_entry["shortdef"][0];
+      entry["date"] = first_entry["date"];
+      entry["etymology"] = first_entry["et"][0][1];
     });
-
-    resp.pipe(
-      concat(function(buffer) {
-        var str = buffer.toString();
-        console.log(str);
-        parser.parseString(str, function(err, result) {
-          var entry_list = result.entry_list;
-          var entries = entry_list.entry;
-          var first_entry = entries[0];
-          var ew = first_entry.ew[0];
-          // console.log('Word: ' + word);
-          var et = first_entry.et[0];
-          var et_str = "";
-          for (var key in et) {
-            et_str += et[key] + " ";
-          }
-          // console.log('Etymology: ' + et_str);
-          var def = first_entry.def[0];
-          var date = def.date[0];
-          // console.log('Date: ' + date);
-          var dt = def.dt[0];
-          // console.log('Definition: ' + util.inspect(dt));
-
-          entry["word"] = ew;
-          entry["etymology"] = et_str;
-          entry["date"] = date;
-          entry["definition"] = dt;
-        });
-      })
-    );
-
-    // console.log(entry);
-
+  }).on('error', (e) => {
+    console.error(e);
   });
 
   res.render('index', {
@@ -65,11 +41,16 @@ router.get('/', function(req, res, next) {
     entry: entry
   });
 
-});
+};
 
-router.post('/input', function(req, res, next) {
-  word = req.body.word;
-  res.redirect('/');
-});
+// /* GET home page. */
+router.get('/', getResults);
+
+// // router.post
+router.get('/input', function(req, res) {
+  word = req.query.word;
+  // console.log(word);
+  // res.redirect('/');
+}, getResults);
 
 module.exports = router;

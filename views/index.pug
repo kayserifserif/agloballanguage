@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   
-  form(action="input" method="post")
+  form(action="input" method="GET")
     label(for="word") Enter a word to look up: 
     input(type="text" name="word" id="name")
     input(type="submit" value="Look up")
