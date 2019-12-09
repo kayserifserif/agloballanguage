@@ -13,7 +13,6 @@ app.use('/', index);
 var word = require('./routes/word.js');
 app.use('/word', word);
 var router = express.Router();
-// app.use('/', router);
 
 app.listen(port, function() {
   console.log('App listening on port ' + port + '!');

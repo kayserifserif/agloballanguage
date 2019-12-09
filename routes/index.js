@@ -3,9 +3,10 @@ const router = express.Router();
 
 var entry = {
   word: "word",
-  definition: "definition",
-  date: 0,
-  etymology: "etymology"
+  pos: "pos",
+  def: "def",
+  etym: "etym",
+  date: 0
 };
 
 router.get('/', function(req, res) {

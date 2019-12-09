@@ -9,6 +9,7 @@ block content
 
   div(class="entry")
     h2= entry.word
-    p(class="definition")= entry.definition
+    p(class="pos")= entry.pos
+    p(class="definition")= entry.def
+    p(class="etymology")!= entry.etym
     p(class="date")= entry.date
-    p(class="etymology")= entry.etymology
