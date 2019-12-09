@@ -8,12 +8,9 @@ var entry = {
   etymology: "etymology"
 };
 
-router.get('/', function(req, res) {
+router.all('/:word', function(req, res) {
+  entry.word = req.params.word;
   res.render('index', { entry });
-});
-
-router.post('/', function(req, res) {
-  res.redirect('/word/' + req.body.word);
-});
+})
 
 module.exports = router;

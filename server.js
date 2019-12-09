@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const parser = require('body-parser');
-const router = express.Router();
 
 var port = process.env.PORT || 3000;
 
@@ -11,6 +10,10 @@ app.set('view engine', 'pug');
 
 var index = require('./routes/index.js');
 app.use('/', index);
+var word = require('./routes/word.js');
+app.use('/word', word);
+var router = express.Router();
+// app.use('/', router);
 
 app.listen(port, function() {
   console.log('App listening on port ' + port + '!');
