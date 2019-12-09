@@ -1,11 +1,10 @@
 extends layout
 
 block content
-  h1= title
+  h1= Etymologee
   
-  form(action="input" method="GET")
-    label(for="word") Enter a word to look up: 
-    input(type="text" name="word" id="name")
+  form(method="POST" action="/")
+    input(type="text" name="word")
     input(type="submit" value="Look up")
 
   div(class="entry")
