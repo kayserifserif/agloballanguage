@@ -8,8 +8,8 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  if (req.body.word) {
-    res.redirect('/word/' + req.body.word);
+  if (req.body.word_input) {
+    res.redirect('/word/' + req.body.word_input);
   }
   // else {
   //   res.render('index', { entries });
