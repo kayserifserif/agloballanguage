@@ -1,33 +1,62 @@
 const express = require('express');
 const router = express.Router();
-var request = require('request');
+const request = require('request');
+const fs = require('fs');
+const origin_coords = require('../data/origin_coords.json')
 
-router.all('/:word', function(req, res) {
+router.all('/:word_input', function(req, res) {
   var url = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/" +
-    req.params.word + "?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1";
-  var entries = [];
+    req.params.word_input + "?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1";
   request(url, function(error, response, body) {
-    var json = JSON.parse(body);
-    for (var entry_num = 0; entry_num < json.length; entry_num++) {
-      var id = /[^:0-9]*/g.exec(json[entry_num].meta.id);
-      if (id && id[0] === req.params.word) {
-        var entry = {};
+    var entries = getEntries(body, req.params.word_input);
+    console.log(entries);
+    res.render('index', { entries });
+  });
+})
 
-        // entry.word = json[entry_num].hwi.hw; // headword info, headword
-        entry.word = id[0];
-        
-        entry.pos = json[entry_num].fl; // functional label
-        
-        entry.def = json[entry_num].shortdef;
-        
-        if (json[entry_num].hasOwnProperty("et")) {
-          entry.etym = json[entry_num].et[0][1];
-          entry.etym = entry.etym.replace(/{it}/g, "<i>");
-          entry.etym = entry.etym.replace(/{\/it}/g, "<\/i>");
+function getEntries(body, word_input) {
+  var entries = [];
+  var json = JSON.parse(body);
+  for (var entry_num = 0; entry_num < json.length; entry_num++) {
+    var id = /[^:0-9]*/g.exec(json[entry_num].meta.id);
+    if (id && id[0] === word_input) {
+      var entry = {};
+
+      entry.word = id[0];
+      
+      entry.pos = json[entry_num].fl; // functional label
+      
+      entry.def = json[entry_num].shortdef;
+      
+      // etymology
+      if (json[entry_num].hasOwnProperty("et")) {
+        entry.etym = json[entry_num].et[0][1];
+        // italics
+        entry.etym = entry.etym.replace(/{it}/g, "<i>");
+        entry.etym = entry.etym.replace(/{\/it}/g, "<\/i>");
+      }
+
+      // coords
+      if (entry.etym) {
+        console.log(entry.etym);
+        var origins = {};
+        for (language in origin_coords) {
+          var regexp = new RegExp(language);
+          if (regexp.test(entry.etym)) {
+            var origin = {
+              "lat": origin_coords[language].lat,
+              "lon": origin_coords[language].lon
+            };
+            origins[language] = origin;
+          }
         }
-        
-        entry.date = json[entry_num].date;
-        var ds = /{[^}]*}/g.exec(entry.date); // date sense
+        entry.origins = origins;
+      }
+      
+      // date
+      entry.date = json[entry_num].date;
+      var ds = /{[^}]*}/g.exec(entry.date); // date sense
+      if (ds) {
         var dss = ds[0].split(/\||{|}/g);
         entry.date = entry.date.replace(/{[^}]*}/g, "");
         var ds_str = ", in the meaning defined at ";
@@ -49,13 +78,12 @@ router.all('/:word', function(req, res) {
           ds_str += "(" + dss[5] + ")";
         }
         entry.date += ds_str;
-        
-        entries.push(entry);
       }
+      
+      entries.push(entry);
     }
-    console.log(entries);
-  });
-  res.render('index', { entries });
-})
+  }
+  return entries;
+}
 
 module.exports = router;
