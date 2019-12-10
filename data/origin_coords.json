@@ -1,94 +1,214 @@
 {
   "English": {
-    "lat": 52.3555,
-    "lon": 1.1743
+    "lat": 52.7536114,
+    "lon": -6.8118403
   },
   "Latin": {
-    "lat": 41.6552,
-    "lon": 12.9896
+    "lat": 41.909986,
+    "lon": 12.3959154
   },
   "German": {
-    "lat": 51.1657,
-    "lon": 10.4515
+    "lat": 51.0899666,
+    "lon": 5.9694896
   },
   "French": {
-    "lat": 46.2276,
-    "lon": 2.2137
+    "lat": 46.131424,
+    "lon": -2.4347271
   },
   "Greek": {
-    "lat": 39.0742,
-    "lon": 21.8243
+    "lat": 38.124509,
+    "lon": 22.2383033
   },
   "Spanish": {
-    "lat": 40.4637,
-    "lon": 3.7492
+    "lat": 40.1217519,
+    "lon": -8.2015516
   },
   "Swedish": {
-    "lat": 60.1282,
-    "lon": 18.6435
+    "lat": 61.7423116,
+    "lon": 8.4445625
   },
   "Irish": {
-    "lat": 53.4129,
-    "lon": 8.2439
+    "lat": 53.3623905,
+    "lon": -10.3413486
   },
-  "Arabic": {
-    "lat": 23.8859,
-    "lon": 45.0792
+  "Arabic": { // Semitic language of Arab League
+    "lat": 25.5896255,
+    "lon": 11.2542912
   },
   "Dutch": {
-    "lat": 52.1326,
-    "lon": 5.2913
+    "lat": 52.1917403,
+    "lon": 3.0372043
   },
   "Lithuanian": {
-    "lat": 55.1694,
-    "lon": 23.8813
+    "lat": 55.1684176,
+    "lon": 22.7623903
   },
   "Norse": {
-    "lat": 62.2786,
-    "lon": 12.3402
+    "lat": 61.7380777,
+    "lon": 0.0989534
   },
   "Welsh": {
-    "lat": 52.1307,
-    "lon": 3.7837
+    "lat": 52.4000305,
+    "lon": -5.2808526
   },
   "Portuguese": {
-    "lat": 39.3999,
-    "lon": 8.2245
+    "lat": 39.0904368,
+    "lon": -8.4630282
   },
   "Hindi": {
-    "lat": 20.5937,
-    "lon": 78.9629
+    "lat": 20.7504968,
+    "lon": 73.7287397
   },
   "Hebrew": {
-    "lat": 31.0461,
-    "lon": 34.8516
+    "lat": 31.401374,
+    "lon": 33.9606904
   },
   "Chinese (Guangdong)": {
-    "lat": 3.1322,
-    "lon": 113.2665
+    "lat": 22.8485161,
+    "lon": 111.2430639
+  },
+  "Chin — Guangdong": {
+    "lat": 22.8485161,
+    "lon": 111.2430639
   },
   "Chinese (Beijing)": {
-    "lat": 9.9042, 
-    "lon": 116.4074
+    "lat": 39.9385466,
+    "lon": 116.1172794
   },
   "Chinese (Xiamen)": {
-    "lat": 4.4798, 
-    "lon": 118.0894
+    "lat": 24.4791815,
+    "lon": 118.0391672
   },
   "Japanese": {
-    "lat": 36.2048,
-    "lon": 138.2529
+    "lat": 36.1911334,
+    "lon": 135.0530181
   },
   "Malay": {
-    "lat": 4.2105,
-    "lon": 101.9758
+    "lat": 4.1279339,
+    "lon": 105.1216696
   },
   "Persian": {
-    "lat": 32.4279,
-    "lon": 53.6880
+    "lat": 32.214854,
+    "lon": 49.1918722
   },
   "Australian": {
-    "lat": 25.2744,
-    "lon": 133.7751
+    "lat": -25.031012,
+    "lon": 115.2138223
+  },
+  "Ewe": { // Niger-Congo language of Togo and Ghana
+    "lat": 7.2555053,
+    "lon": -0.7221373
+  },
+  "Wolof": { // Niger-Congo language of Senegal, the Gambia, Mauritania
+    "lat": 14.4762728,
+    "lon": -15.6381223
+  },
+  "Kimbundu": { // Bantu language of Angola
+    "lat": -11.1799497,
+    "lon": 13.282924
+  },
+  "Lingala": { // Bantu language of DR Congo and R Congo
+    "lat": -3.8238516,
+    "lon": 23.2979753
+  },
+  "Kele": { // Bantu language of Gabon
+    "lat": -0.7033328,
+    "lon": 11.3281893
+  },
+  "Swahili": { // Bantu language and lingua franca of Africa Great Lakes region
+    "lat": -6.2878553,
+    "lon": 32.9984367
+  },
+  "Kongo": { // Bantu language of DR Congo and R Congo
+    "lat": -3.8238516,
+    "lon": 23.2979753
+  },
+  "Kiongo": { // Bantu language of DR Congo and R Congo
+    "lat": -3.8238516,
+    "lon": 23.2979753
+  },
+  "Malinke": { // aka Maninka, Niger-Congo language of Guinea
+    "lat": 9.9145972,
+    "lon": -11.0892553
+  },
+  "American Spanish": { // southern US
+    "lat": 32.063605,
+    "lon": -103.1501197
+  },
+  "Egyptian": {
+    "lat": 26.7173112,
+    "lon": 29.4822794
+  },
+  "Somali": {
+    "lat": 5.2310404,
+    "lat": 45.1914555
+  },
+  "Khoikhoi": { // Khoe language of Namibia, Botswana, S Africa
+    "lat": -26.8887582,
+    "lon": 21.166941
+  },
+  "Afrikaans": { // West Germanic language of S Africa and Namibia
+    "lat": -29.521845,
+    "lon": 23.6718239
+  },
+  "American French": { // Louisiana, New England, Missouri, Michigan, N Dakota
+    "lat": 43.9069822,
+    "lon": -71.7252727
+  },
+  "Umbundu": { // Bantu language of Angola
+    "lat": -11.1799497,
+    "lon": 13.282924
+  },
+  "Zulu": { // southern Bantu language of KwaZulu-Natal, S Africa
+    "lat": 28.9166736,
+    "lat": 30.1988332
+  },
+  "Atlantic Creole": { // Americans with ancestral roots in Africa, Europe, Caribbean, arrival in Chesapeake Bay
+    "lat": 37.2650988,
+    "lon": -76.2575635
+  },
+  "Ga": { // Kwa language of Ghana
+    "lat": 5.5939381,
+    "lon": -0.1872849
+  },
+  "Gabon": {
+    "lat": -0.7033328,
+    "lon": 11.3281893
+  },
+  "Congo": {
+    "lat": -3.8238516,
+    "lon": 23.2979753
+  },
+  "Fulani": { // aka Fula, Niger-Congo language of Senegambia region
+    "lat": 13.6476136,
+    "lon": 13.6476136
+  },
+  "Mandingo": { // West African ethnic gorup
+    "lat": 15.1411937,
+    "lon": -6.0204085
+  },
+  "Ibo": { // aka Igbo, Niger-Congo language of Nigeria
+    "lat": 7.6911724,
+    "lon": 11.3015873
+  },
+  "Mvuba": { // Central Sudanic language of Congo
+    "lat": 0.7119974,
+    "lon": 26.7495289
+  },
+  "Gullah": { // West African-based creole of S Carolina and Georgia
+    "lat": 33.0729594,
+    "lon": -81.6461982
+  },
+  "Krio": { // English-based creole of Sierra Leone
+    "lat": 8.366354,
+    "lon": -12.0139267
+  },
+  "Tswana": { // Bantu language of Botswana
+    "lat": -22.5043541,
+    "lon": 23.4891478
+  },
+  "Haitian Creole": { // French-based creole of Haiti
+    "lat": 18.9538468,
+    "lon": -72.9146228
   }
 }
