@@ -9,7 +9,6 @@ router.all('/:word_input', function(req, res) {
     req.params.word_input + "?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1";
   request(url, function(error, response, body) {
     var entries = getEntries(body, req.params.word_input);
-    console.log(entries);
     res.render('word', { entries });
   });
 })
@@ -19,7 +18,7 @@ function getEntries(body, word_input) {
   var json = JSON.parse(body);
   for (var entry_num = 0; entry_num < json.length; entry_num++) {
     var id = /[^:0-9]*/g.exec(json[entry_num].meta.id);
-    if (id && id[0] === word_input) {
+    if (id && id[0].toLowerCase() === word_input.toLowerCase()) {
       var entry = {};
 
       entry.word = id[0];
