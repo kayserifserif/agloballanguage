@@ -1,20 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-var entry = {
-  word: "word",
-  pos: "pos",
-  def: "def",
-  etym: "etym",
-  date: 0
-};
+var entries = [];
 
 router.get('/', function(req, res) {
-  res.render('index', { entry });
+  res.render('index', { entries });
 });
 
 router.post('/', function(req, res) {
-  res.redirect('/word/' + req.body.word);
+  if (req.body.word) {
+    res.redirect('/word/' + req.body.word);
+  }
+  // else {
+  //   res.render('index', { entries });
+  // }
 });
 
 module.exports = router;

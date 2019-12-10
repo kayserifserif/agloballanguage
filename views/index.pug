@@ -6,10 +6,14 @@ block content
   form(method="POST" action="/")
     input(type="text" name="word")
     input(type="submit" value="Look up")
-
-  div(class="entry")
-    h2= entry.word
-    p(class="pos")= entry.pos
-    p(class="definition")= entry.def
-    p(class="etymology")!= entry.etym
-    p(class="date")= entry.date
+  
+  div(class="entries")
+    each entry in entries
+      div(class="entry")
+        h2= entry.word
+        p(class="pos")= entry.pos
+        div(class="defs")
+          each d in entry.def
+            p(class="def")!= d
+        p(class="etym")!= entry.etym
+        p(class="date")= entry.date
