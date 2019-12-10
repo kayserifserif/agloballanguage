@@ -4,30 +4,10 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="/javascripts/three.min.js")
     script(src="/javascripts/globe.js")
-    script(src="/javascripts/scripts.js")
     script.
-      var my_entries = "#{JSON.stringify(entries)}";
-      my_entries = my_entries.replace(/&quot;/g, '"');
-      my_entries = JSON.parse(my_entries);
-
-      window.onload = function() {
-        var container = document.getElementById("container");
-        var globe = new DAT.Globe(container);
-        var origins = my_entries[0].origins;
-        console.log(origins);
-        if (Object.keys(origins).length > 0) {
-          var data = [];
-          for (language in origins) {
-            data.push(origins[language].lat);
-            data.push(origins[language].lon);
-            data.push(0.05);
-          }
-          console.log(data);
-          globe.addData(data, {});
-        }
-        globe.createPoints();
-        globe.animate();
-      }
+      var my_entries = !{JSON.stringify(entries)};
+      console.log(my_entries);
+    script(src="/javascripts/scripts.js")
 
 body
 
