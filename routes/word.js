@@ -10,7 +10,7 @@ router.all('/:word_input', function(req, res) {
   request(url, function(error, response, body) {
     var entries = getEntries(body, req.params.word_input);
     console.log(entries);
-    res.render('index', { entries });
+    res.render('word', { entries });
   });
 })
 

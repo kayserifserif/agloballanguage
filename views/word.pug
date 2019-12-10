@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/three.min.js")
+    script(src="/javascripts/globe.js")
+    script(src="/javascripts/scripts.js")
+
+body
+  h1= Etymologee
+
+  form(method="POST" action="/" class="search")
+    input(type="text" name="word_input")
+    input(type="submit" value="Look up")
+
+  div(class="entries")
+    each entry in entries
+      div(class="entry")
+        h2= entry.word
+        p(class="pos")= entry.pos
+        div(class="defs")
+          each d in entry.def
+            p(class="def")!= d
+        p(class="etym")!= entry.etym
+        p(class="date")= entry.date
+  
+  div(id="container")
