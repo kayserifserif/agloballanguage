@@ -91,10 +91,6 @@
     "lat": 32.214854,
     "lon": 49.1918722
   },
-  "Australian": {
-    "lat": -25.031012,
-    "lon": 115.2138223
-  },
   "Ewe": { // Niger-Congo language of Togo and Ghana
     "lat": 7.2555053,
     "lon": -0.7221373
@@ -131,10 +127,6 @@
     "lat": 9.9145972,
     "lon": -11.0892553
   },
-  "American Spanish": { // southern US
-    "lat": 32.063605,
-    "lon": -103.1501197
-  },
   "Egyptian": {
     "lat": 26.7173112,
     "lon": 29.4822794
@@ -151,10 +143,6 @@
     "lat": -29.521845,
     "lon": 23.6718239
   },
-  "American French": { // Louisiana, New England, Missouri, Michigan, N Dakota
-    "lat": 43.9069822,
-    "lon": -71.7252727
-  },
   "Umbundu": { // Bantu language of Angola
     "lat": -11.1799497,
     "lon": 13.282924
@@ -170,14 +158,6 @@
   "Ga": { // Kwa language of Ghana
     "lat": 5.5939381,
     "lon": -0.1872849
-  },
-  "Gabon": {
-    "lat": -0.7033328,
-    "lon": 11.3281893
-  },
-  "Congo": {
-    "lat": -3.8238516,
-    "lon": 23.2979753
   },
   "Fulani": { // aka Fula, Niger-Congo language of Senegambia region
     "lat": 13.6476136,
@@ -207,8 +187,36 @@
     "lat": -22.5043541,
     "lon": 23.4891478
   },
-  "Haitian Creole": { // French-based creole of Haiti
-    "lat": 18.9538468,
-    "lon": -72.9146228
+  "Dharuk": { // aka Darug, Pama-Nyungan Aus. Ab. language of region of Syndey, NSW, Aus.
+    "lat": -33.8570509,
+    "lon": 151.0088482
+  },
+  "Wiradhuri": { // aka Wiradjuri, Pama-Nyungan Aus. Ab. language of region of central NSW, Aus.
+    "lat": -32.8063578,
+    "lon": 147.6048408
+  },
+  "Yuwaalaraay": { // aka Ualarai, dialect of Gamilaraay, Pama-Nyungan Aus. Ab. language of SE Aus.
+    "lat": -30.6079998,
+    "lon": 142.653338
+  },
+  "Wemba-Wemba": { // Pama-Nyungan Aus. Ab. language of Murrumbidgee River
+    "lat": -35.7479102,
+    "lat": 148.7189195
+  },
+  "Nyungar": { // Pama-Nyungan Aus. Ab. language of SW Aus.
+    "lat": -31.8778835,
+    "lon": 119.4831604
+  },
+  "Guugu Yimidhirr": { // Pama-Nyungan Aus. Ab. language of Far North Queensland, Aus.
+    "lat": -16.960285,
+    "lon": 145.7569575
+  },
+  "Wik Munkan": { // Pama-Nyungan Aus. Ab. language of Cape York Peninsula, Queensland, Aus.
+    "lat": -10.7012226,
+    "lon": 142.5187266
+  },
+  "Gamilaraay": { // Pama-Nyungan Aus. Ab. language of SE Aus.
+    "lat": -30.6079998,
+    "lon": 142.653338
   }
 }
