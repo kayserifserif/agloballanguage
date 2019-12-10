@@ -38,7 +38,6 @@ function getEntries(body, word_input) {
 
       // coords
       if (entry.etym) {
-        console.log(entry.etym);
         var origins = {};
         for (language in origin_coords) {
           var regexp = new RegExp(language);
@@ -78,6 +77,17 @@ function getEntries(body, word_input) {
           ds_str += "(" + dss[5] + ")";
         }
         entry.date += ds_str;
+      }
+
+      // year
+      if (entry.date) {
+        var date_str = entry.date.split(",")[0]; // before date sense
+        var date_word = date_str.match(/\d+[^ ]*/g)[0]; // word containing date
+        var year = Number(date_word); // try converting to number
+        if (isNaN(year)) { // set to middle of century
+          year = (parseInt(date_word) - 1) * 100 + 50;
+        }
+        entry.year = year;
       }
       
       entries.push(entry);
