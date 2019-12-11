@@ -12,11 +12,14 @@ html, body {
   width: 100%;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 .search,
 .entries {
   position: absolute;
   left: 50px;
-  padding: 20px;
   z-index: 1;
   background-color: #fff;
   opacity: 0.9;
@@ -24,12 +27,14 @@ html, body {
 
 .search {
   top: 50px;
+  padding: 20px 30px 40px;
 }
 
 .entries {
-  top: 150px;
+  top: 250px;
   width: 400px;
   height: 400px;
+  padding: 20px 30px;
   overflow: scroll;
 }
 

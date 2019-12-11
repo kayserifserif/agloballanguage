@@ -1,6 +1,8 @@
 doctype html
-html
+html(lang="en")
   head
+    meta(charset="UTF-8")
+    title A Global Language
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="/javascripts/three.min.js")
     script(src="/javascripts/globe.js")
@@ -12,6 +14,7 @@ html
 body
 
   form(method="POST" action="/" class="search")
+    h1 A Global Language
     input(type="text" name="word_input")
     input(type="submit" value="Look up")
 

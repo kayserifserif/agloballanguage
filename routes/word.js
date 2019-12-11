@@ -9,6 +9,7 @@ router.all('/:word_input', function(req, res) {
     req.params.word_input + "?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1";
   request(url, function(error, response, body) {
     var entries = getEntries(body, req.params.word_input);
+    console.log(entries);
     res.render('word', { entries });
   });
 })
