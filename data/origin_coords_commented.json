@@ -1,4 +1,5 @@
 {
+  // Indo-European (European and Asian language family)
   "English": {
     "lat": 52.7536114,
     "lon": -6.8118403
@@ -31,19 +32,19 @@
     "lat": 52.1917403,
     "lon": 3.0372043
   },
-  "Old Low Franconian": {
+  "Old Low Franconian": { // aka Old Dutch
     "lat": 52.1917403,
     "lon": 3.0372043
   },
-  "Afrikaans": {
+  "Afrikaans": { // West Germanic language of S Africa and Namibia
     "lat": -29.521845,
     "lon": 23.6718239
   },
-  "Yiddish": {
+  "Yiddish": { // historical language of Ashkenazi Jews
     "lat": 54.3019216,
     "lon": 23.1511309
   },
-  "Goth": {
+  "Goth": { // aka Gothic, extinct East Germanic language
     "lat": 51.3059372,
     "lon": 11.9782392
   },
@@ -51,7 +52,7 @@
     "lat": 41.909986,
     "lon": 12.3959154
   },
-  "Etruscan": {
+  "Etruscan": { // ancient Mediterranean language
     "lat": 43.844325,
     "lon": 4.4146487
   },
@@ -63,15 +64,15 @@
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Haitian Creole": {
+  "Haitian Creole": { // French-based creole of Haiti
     "lat": 18.9538468,
     "lon": -72.9146228
   },
-  "Louisiana Creole": {
+  "Louisiana Creole": { // French-based creole of Louisiana, USA
     "lat": 30.9179678,
     "lon": -93.644238
   },
-  "American French": {
+  "American French": { // Louisiana, New England, Missouri, Michigan, N Dakota
     "lat": 43.9069822,
     "lon": -71.7252727
   },
@@ -79,7 +80,7 @@
     "lat": 40.1217519,
     "lon": -8.2015516
   },
-  "American Spanish": {
+  "American Spanish": { // southern USA
     "lat": 32.063605,
     "lon": -103.1501197
   },
@@ -91,7 +92,7 @@
     "lat": 41.909986,
     "lon": 12.3959154
   },
-  "Old Occitan": {
+  "Old Occitan": { // aka Old Provençal
     "lat": 43.844325,
     "lon": 4.4146487
   },
@@ -107,7 +108,7 @@
     "lat": 53.3623905,
     "lon": -10.3413486
   },
-  "Gaulish": {
+  "Gaulish": { // ancient Celtic language
     "lat": 43.844325,
     "lon": 4.4146487
   },
@@ -143,7 +144,7 @@
     "lat": 44.086326,
     "lon": 20.9429484
   },
-  "Mansi": {
+  "Mansi": { // Uralic language of Tyumen Oblast, Russia
     "lat": 57.5477169,
     "lon": 67.7691658
   },
@@ -167,22 +168,23 @@
     "lat": 21.9374738,
     "lon": 77.5959272
   },
-  "Pali": {
+  "Pali": { // Indo-Aryan liturgical language
     "lat": 21.8712835,
     "lon": 86.2380349
   },
-  "Marathi": {
+  "Marathi": { // Indo-Aryan language of Maharashtra, India
     "lat": 18.9371602,
     "lon": 75.9704971
   },
-  "Prakrit": {
+  "Prakrit": { // Middle Indo-Aryan languages formerly used in India
     "lat": 20.1830027,
     "lon": 79.4091852
   },
-  "Romany": {
+  "Romany": { // aka Romani
     "lat": 39.0015275,
     "lon": 30.6888366
   },
+  // Uralic (Northern Eurasian language family)
   "Hungarian": {
     "lat": 43.844325,
     "lon": 4.4146487
@@ -191,11 +193,12 @@
     "lat": 67.2994438,
     "lon": 37.5492883
   },
-  "Malayalam": {
+  // Dravidian (South Asian language family)
+  "Malayalam": { // Dravidian language of Kerala, India
     "lat": 10.5656583,
     "lon": 76.4297946
   },
-  "Telugu": {
+  "Telugu": { // Dravidian language of Andhra Pradesh and Telangana, India
     "lat": 43.844325,
     "lon": 4.4146487
   },
@@ -203,7 +206,8 @@
     "lat": 10.7471203,
     "lon": 78.1538186
   },
-  "Arabic": {
+  // Afro-Asiatic (language family of W Africa, N Africa, Horn of Africa, Sahel)
+  "Arabic": { // Semitic language of Arab League
     "lat": 25.5896255,
     "lon": 11.2542912
   },
@@ -219,6 +223,7 @@
     "lat": 5.2310404,
     "lat": 45.1914555
   },
+  // Turkic
   "Kazakh": {
     "lat": 47.6547608,
     "lon": 57.9380638
@@ -231,6 +236,7 @@
     "lat": 39.0015275,
     "lon": 30.6888366
   },
+  // Sino-Tibetan  (Asian language family)
   "Chinese (Guangdong)": {
     "lat": 22.8485161,
     "lon": 111.2430639
@@ -247,14 +253,17 @@
     "lat": 24.4791815,
     "lon": 118.0391672
   },
+  // Japonic (Japanese language family)
   "Japanese": {
     "lat": 36.1911334,
     "lon": 135.0530181
   },
+  // Koreanic (Korean language family)
   "Korean": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Austronesian (family of Southeast Asian and Pacific languages)
   "Malay": {
     "lat": 4.1279339,
     "lon": 105.1216696
@@ -271,131 +280,136 @@
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Maori": {
+  "Maori": { // Eastern Polynesian language of New Zealand
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Ewe": {
+  // Niger-Congo (African language family)
+  "Ewe": { // Niger-Congo language of Togo and Ghana
     "lat": 7.2555053,
     "lon": -0.7221373
   },
-  "Wolof": {
+  "Wolof": { // language of Senegal, the Gambia, Mauritania
     "lat": 14.4762728,
     "lon": -15.6381223
   },
-  "Kimbundu": {
+  "Kimbundu": { // Bantu language of Angola
     "lat": -11.1799497,
     "lon": 13.282924
   },
-  "Lingala": {
+  "Lingala": { // Bantu language of DR Congo and R Congo
     "lat": -3.8238516,
     "lon": 23.2979753
   },
-  "Kele": {
+  "Kele": { // Bantu language of Gabon
     "lat": -0.7033328,
     "lon": 11.3281893
   },
-  "Swahili": {
+  "Swahili": { // Bantu language and lingua franca of Africa Great Lakes region
     "lat": -6.2878553,
     "lon": 32.9984367
   },
-  "Kongo": {
+  "Kongo": { // Bantu language of DR Congo and R Congo
     "lat": -3.8238516,
     "lon": 23.2979753
   },
-  "Kiongo": {
+  "Kiongo": { // Bantu language of DR Congo and R Congo
     "lat": -3.8238516,
     "lon": 23.2979753
   },
-  "Malinke": {
+  "Malinke": { // aka Maninka, language of Guinea
     "lat": 9.9145972,
     "lon": -11.0892553
   },
-  "Umbundu": {
+  "Umbundu": { // Bantu language of Angola
     "lat": -11.1799497,
     "lon": 13.282924
   },
-  "Zulu": {
+  "Zulu": { // southern Bantu language of KwaZulu-Natal, S Africa
     "lat": 28.9166736,
     "lat": 30.1988332
   },
-  "Ga": {
+  "Ga": { // Kwa language of Ghana
     "lat": 5.5939381,
     "lon": -0.1872849
   },
-  "Fulani": {
+  "Fulani": { // aka Fula, language of Senegambia region
     "lat": 13.6476136,
     "lon": 13.6476136
   },
-  "Mandingo": {
+  "Mandingo": { // West African ethnic gorup
     "lat": 15.1411937,
     "lon": -6.0204085
   },
-  "Ibo": {
+  "Ibo": { // aka Igbo, language of Nigeria
     "lat": 7.6911724,
     "lon": 11.3015873
   },
-  "Tswana": {
+  "Tswana": { // Bantu language of Botswana
     "lat": -22.5043541,
     "lon": 23.4891478
   },
-  "Atlantic Creole": {
+  "Atlantic Creole": { // Americans with ancestral roots in Africa, Europe, Caribbean, arrival in Chesapeake Bay
     "lat": 37.2650988,
     "lon": -76.2575635
   },
-  "Gullah": {
+  "Gullah": { // West African-based creole of S Carolina and Georgia
     "lat": 33.0729594,
     "lon": -81.6461982
   },
-  "Krio": {
+  "Krio": { // English-based creole of Sierra Leone
     "lat": 8.366354,
     "lon": -12.0139267
   },
-  "Khoikhoi": {
+  // Khoe (southern Africa language family)
+  "Khoikhoi": { // language of Namibia, Botswana, S Africa
     "lat": -26.8887582,
     "lon": 21.166941
   },
-  "Mvuba": {
+  // Nilo-Saharan (African language family)
+  "Mvuba": { // Central Sudanic language of Congo
     "lat": 0.7119974,
     "lon": 26.7495289
   },
-  "Dharuk": {
+  // Pama-Nyungan (Australian Aboriginal language family)
+  "Dharuk": { // aka Darug, language of region of Syndey, NSW, Aus.
     "lat": -33.8570509,
     "lon": 151.0088482
   },
-  "Wiradhuri": {
+  "Wiradhuri": { // aka Wiradjuri, language of central NSW, Aus.
     "lat": -32.8063578,
     "lon": 147.6048408
   },
-  "Yuwaalaraay": {
+  "Yuwaalaraay": { // aka Ualarai, dialect of Gamilaraay, language of SE Aus.
     "lat": -30.6079998,
     "lon": 142.653338
   },
-  "Wemba-Wemba": {
+  "Wemba-Wemba": { // language of Murrumbidgee River
     "lat": -35.7479102,
     "lat": 148.7189195
   },
-  "Nyungar": {
+  "Nyungar": { // language of SW Aus.
     "lat": -31.8778835,
     "lon": 119.4831604
   },
-  "Guugu Yimidhirr": {
+  "Guugu Yimidhirr": { // language of Far North Queensland, Aus.
     "lat": -16.960285,
     "lon": 145.7569575
   },
-  "Wik Munkan": {
+  "Wik Munkan": { // language of Cape York Peninsula, Queensland, Aus.
     "lat": -10.7012226,
     "lon": 142.5187266
   },
-  "Gamilaraay": {
+  "Gamilaraay": { // language of SE Aus.
     "lat": -30.6079998,
     "lon": 142.653338
   },
-  "Micmac": {
+  // Algic (indigenous language family of N America)
+  "Micmac": { // aka Miꞌkmaq, Eastern Algonquian language of Canada and USA
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Ojibwe": {
+  "Ojibwe": { // Algonquian language of N America
     "lat": 43.844325,
     "lon": 4.4146487
   },
@@ -403,70 +417,81 @@
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Montagnais": {
+  "Montagnais": { // aka Innu-aimun, Algonquian language of Labrador and Quebec, Canada
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Cree": {
+  "Cree": { // dialect continuum of Algonquian languages across Canada
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Virginia Algonquian": {
+  "Virginia Algonquian": { // aka Powhatan, extinct Eastern Algonquian language of tidewater Virginia
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Massachusett": {
+  "Massachusett": { // Algonquian language of Massachusetts
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Narragansett": {
+  "Narragansett": { // Algonquian language of Rhode Island
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Illinois": {
+  "Illinois": { // aka Miami-Illinois, Algonquian language of Illinois
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Nahuatl": {
+  // Uto-Aztecan (indigenous language family of the Americas)
+  "Nahuatl": { // aka Aztec, Nahua language of Mexico
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Quechua (indigenous language family of Peruvian Andes and highlands of S America)
   "Quechua": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
-  "Inuit": {
+  // Eskimo-Aleuit (Arctic language family)
+  "Inuit": { // indigenous language of N American Arctic
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Arawakan (ancient indigenous language family of S America)
   "Taino": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Cariban (indigenous language family of S America)
   "Carib": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Tupian (language family of S America)
   "Tupi": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Yok-Utian (language family of California, USA)
   "Rumsen": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Aymaran (language family of central Andes)
   "Aymara": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Muskogean (language family of SE USA)
   "Choctaw": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Salishan (language family of Pacific Northwest)
   "Lushootseed": {
     "lat": 43.844325,
     "lon": 4.4146487
   },
+  // Araucanian (language family of Americas)
   "Mapuche": {
     "lat": 43.844325,
     "lon": 4.4146487
