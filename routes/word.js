@@ -42,11 +42,21 @@ function getEntries(body, word_input) {
         for (var language in origin_coords) {
           var regexp = new RegExp(language);
           if (regexp.test(entry.etym)) {
-            var origin = {
-              "lat": origin_coords[language].lat,
-              "lon": origin_coords[language].lon
-            };
-            origins[language] = origin;
+            // check if language already exists (e.g. Late Latin and Latin)
+            var unique = true;
+            for (var existing_lang in origins) {
+              console.log(existing_lang, existing_lang.includes(language));
+              if (existing_lang.includes(language)) {
+                unique = false;
+              }
+            }
+            if (unique) {
+              var origin = {
+                "lat": origin_coords[language].lat,
+                "lon": origin_coords[language].lon
+              };
+              origins[language] = origin;
+            }
           }
         }
         entry.origins = origins;
