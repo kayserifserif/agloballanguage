@@ -4,12 +4,15 @@ html(lang="en")
     meta(charset="UTF-8")
     title A Global Language
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/javascripts/detector.js")
-    script(src="/javascripts/three.min.js")
+    script(src="/javascripts/three/ThreeWebGL.js")
+    script(src="/javascripts/three/ThreeExtras.js")
+    script(src="/javascripts/three/RequestAnimationFrame.js")
+    script(src="/javascripts/three/Detector.js")
+    script(src="/javascripts/Tween.js")
     script(src="/javascripts/globe.js")
     script.
       var my_entries = !{JSON.stringify(entries)};
-      console.log(my_entries);
+      console.log("entries", my_entries);
     script(src="/javascripts/scripts.js")
 
 body
@@ -31,3 +34,5 @@ body
         p(class="date")= entry.date
   
   div(id="container")
+
+  div(id="timeline")

@@ -14,6 +14,7 @@ html, body {
 
 body {
   font-family: sans-serif;
+  background-color: #000;
 }
 
 .search,
@@ -44,4 +45,34 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#timeline {
+  width: auto;
+  position: absolute;
+  right: 20px;
+  top: 63px;
+
+  background-color: rgba(0,0,0,0.2);
+
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding: 10px;
+}
+
+.time {
+  font: 16px Georgia;
+  line-height: 26px;
+  height: 30px;
+  text-align: center;
+  float: left;
+  width: 90px;
+  color: rgba(255, 255, 255, 0.4);
+
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+.time:hover, .time.active {
+  font-size: 23px;
+  color: #fff;
 }
