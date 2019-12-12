@@ -39,7 +39,7 @@ function getEntries(body, word_input) {
       // coords
       if (entry.etym) {
         var origins = {};
-        for (language in origin_coords) {
+        for (var language in origin_coords) {
           var regexp = new RegExp(language);
           if (regexp.test(entry.etym)) {
             var origin = {
