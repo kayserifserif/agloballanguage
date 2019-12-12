@@ -20,7 +20,7 @@ window.onload = function() {
       for (language in origins) {
         data.push(origins[language].lat);
         data.push(origins[language].lon);
-        data.push(0.1);
+        data.push(0.05); // size
       }
       globe.addData(data, {format: "magnitude", name: language});
     }
