@@ -1,8 +1,11 @@
 const timeline_start = 1100;
 const timeline_end = 2000;
-var date;
+var date = 2000;
 var date_el;
 var date_x;
+
+const height_normal = 0.05;
+const height_peak = 0.2;
 
 window.onload = function() {
 
@@ -15,12 +18,24 @@ window.onload = function() {
     var globe = new DAT.Globe(container);
 
     // get entry with longest etym
-    var entry_num = 0;
     var etym = "";
+    var origin_langs = 0;
+    var entry_num = 0;
     for (var i = 0; i < my_entries.length; i++) {
-      if (my_entries[i].etym) {
-        if (my_entries[i].etym.length > etym.length) {
+      if (my_entries[i].etym && my_entries[i].origins) {
+        // if (my_entries[i].etym.length > etym.length) {
+        if (Object.keys(my_entries[i].origins).length > origin_langs) {
           etym = my_entries[i].etym;
+          origin_langs = Object.keys(my_entries[i].origins).length;
+          entry_num = i;
+        }
+      }
+    }
+    // if no etym, get oldest entry
+    if (etym === "") {
+      for (var i = 0; i < my_entries.length; i++) {
+        if (my_entries[i].year < date) {
+          date = my_entries[i].year;
           entry_num = i;
         }
       }
@@ -131,9 +146,9 @@ window.onload = function() {
             current_data.push(origins[j][1]);
             current_data.push(origins[j][2]);
             if (i == j) { // size
-              current_data.push(0.2);
+              current_data.push(height_peak);
             } else {
-              current_data.push(0.05);
+              current_data.push(height_normal);
             }
           }
           globe.addData(current_data, {format: "magnitude", name: origins[i][0], animated: true});
