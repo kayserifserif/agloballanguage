@@ -48,6 +48,38 @@ body {
 }
 
 #timeline {
+  height: 20px;
+  background-color: #16466f;
+  border-bottom: 1px solid #3285CA;
+}
+
+.timeline-label {
+  position: absolute;
+  display: inline-block;
+  padding: 3px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.timeline-label:nth-of-type(2) {
+  right: 0;
+}
+
+#date_marker {
+  position: absolute;
+  color: #fff;
+}
+
+#date_marker::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 5px;
+  margin: 0 auto 10px;
+  background-color: #00FFFF;
+}
+
+#stages {
   position: absolute;
   width: 100%;
   padding: 10px;

@@ -54,7 +54,6 @@ window.onload = function() {
         etym_words = etym_words.replace(origins[i][0], "");
       }
       words = Array.from(etym_words.matchAll(/<i>[^<]*<\/i>[^,]*/g));
-      console.log(Array.from(words));
       var words_div = document.getElementById("words");
       for (var i = 0; i < words.length; i++) {
         var word_el = document.createElement("span");
@@ -129,6 +128,17 @@ window.onload = function() {
         }
       }
     }
+
+    // mark date on timeline
+    var date = my_entries[entry_num].year;
+    console.log(date);
+    var date_x = (date / 2020) * window.innerWidth;
+    var date_el = document.createElement("span");
+    date_el.append(document.createTextNode(date + ""));
+    date_el.id = "date_marker";
+    date_el.style.left = date_x + "px";
+    var timeline = document.getElementById("timeline");
+    timeline.append(date_el);
 
     // create globe
     globe.createPoints();
