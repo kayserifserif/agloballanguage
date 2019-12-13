@@ -27,12 +27,12 @@ body {
 }
 
 .search {
-  top: 50px;
+  top: 120px;
   padding: 20px 30px 40px;
 }
 
 .entries {
-  top: 250px;
+  top: 320px;
   width: 400px;
   height: 400px;
   padding: 20px 30px;
@@ -81,6 +81,7 @@ body {
 
 #stages {
   position: absolute;
+  top: 40px;
   width: 100%;
   padding: 10px;
   display: flex;
@@ -100,8 +101,6 @@ body {
 
 .time,
 .word {
-  display: flex;
-  justify-content: center;
   font: 16px Georgia;
   line-height: 26px;
   height: 50px;
@@ -109,12 +108,15 @@ body {
   float: left;
   width: 150px;
   color: rgba(255, 255, 255, 0.4);
+  text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.1s ease-out;
 }
 
 .time {
+  display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .time:hover, .time.active {
