@@ -31,87 +31,110 @@ window.onload = function() {
     }
     console.log("origins", origins);
 
-    // populate times
-    var times = [];
-    var timeline = document.getElementById("timeline");
-    for (var i = origins.length - 1; i >= 0; i--) {
-      var num = i + 1;
-      times.push(num + "");
-      var time_el = document.createElement("span");
-      time_el.id = "time" + num;
-      time_el.classList.add("time");
-      time_el.append(document.createTextNode(num + ""));
-      timeline.append(time_el);
-    }
-
-    // set tweens
-    var settime = function(globe, t) {
-      return function() {
-        new TWEEN.Tween(globe).to({time: t/times.length}, 500).easing(TWEEN.Easing.Cubic.EaseOut).start();
-        var time_el = document.getElementById("time" + times[t]);
-        if (time_el.classList.contains("active")) {
-          return;
-        }
-        var time_els = document.getElementsByClassName("time");
-        for (var i = 0; i < time_els.length; i++) {
-          time_els[i].classList.remove("active");
-        }
-        time_el.classList.add("active");
-      }
-    }
-    for (var i = 0; i < times.length; i++) {
-      var time_el = document.getElementById("time" + times[i]);
-      time_el.addEventListener("mouseover", settime(globe, i), false);
-    }
-    TWEEN.start();
-
-    // get and parse etymology
-    // split by language
-    var lang_re_str = "\\s(?=";
-    for (var i = 0; i < origins.length; i++) {
-      lang_re_str += "" + origins[i][0] + "|";
-    }
-    lang_re_str = lang_re_str.slice(0, -1); // get rid of last pipe
-    lang_re_str += ")";
-    var lang_re = new RegExp(lang_re_str, "g");
-    var split = etym.split(lang_re);
-    // replace "literally."
-    var literally_re = /literally,$/g;
-    for (var i = split.length - 1; i >= 0; i--) {
-      if (literally_re.test(split[i]) && i < split.length - 1) {
-        split.splice(i, 2, split[i] + " " + split[i + 1]);
-      }
-    }
-    // separate out connections
-    var connect_re = /[,;]\s(?=from|akin to)/g;
-    for (var i = split.length - 1; i >= 0; i--) {
-      var subsplit = split[i].split(connect_re);
-      if (subsplit.length == 2) {
-        split.splice(i, 1, subsplit[0], subsplit[1]);
-      }
-    }
-    console.log("path", split);
-
-    // add origins
     if (origins.length > 0) {
+    
+      // populate times
+      var times = [];
+      var language_div = document.getElementById("languages");
+      for (var i = origins.length - 1; i >= 0; i--) {
+        var num = i + 1;
+        var lang = origins[i][0];
+        times.push(num + "");
+        var time_el = document.createElement("span");
+        time_el.id = "time" + num;
+        time_el.classList.add("time");
+        time_el.append(document.createTextNode(lang));
+        language_div.append(time_el);
+      }
+
+      // get words
+      var words = [];
+      var etym_words = etym;
       for (var i = 0; i < origins.length; i++) {
-        var current_data = [];
-        for (var j = 0; j < origins.length; j++) {
-          current_data.push(origins[j][1]);
-          current_data.push(origins[j][2]);
-          if (i == j) { // size
-            current_data.push(0.2);
-          } else {
-            current_data.push(0.05);
+        etym_words = etym_words.replace(origins[i][0], "");
+      }
+      words = Array.from(etym_words.matchAll(/<i>[^<]*<\/i>[^,]*/g));
+      console.log(Array.from(words));
+      var words_div = document.getElementById("words");
+      for (var i = 0; i < words.length; i++) {
+        var word_el = document.createElement("span");
+        word_el.id = "word" + (i + 1);
+        word_el.classList.add("word");
+        word_el.append(document.createTextNode(words[i]));
+        words_div.append(word_el);
+      }
+
+      // set tweens
+      var settime = function(globe, t) {
+        return function() {
+          new TWEEN.Tween(globe).to({time: t/times.length}, 500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+          var time_el = document.getElementById("time" + times[t]);
+          if (time_el.classList.contains("active")) {
+            return;
           }
+          var time_els = document.getElementsByClassName("time");
+          for (var i = 0; i < time_els.length; i++) {
+            time_els[i].classList.remove("active");
+          }
+          time_el.classList.add("active");
         }
-        globe.addData(current_data, {format: "magnitude", name: origins[i][0], animated: true});
+      }
+      for (var i = 0; i < times.length; i++) {
+        var time_el = document.getElementById("time" + times[i]);
+        time_el.addEventListener("mouseover", settime(globe, i), false);
+      }
+      TWEEN.start();
+
+      // get and parse etymology
+      // split by language
+      var lang_re_str = "\\s(?=";
+      for (var i = 0; i < origins.length; i++) {
+        lang_re_str += "" + origins[i][0] + "|";
+      }
+      lang_re_str = lang_re_str.slice(0, -1); // get rid of last pipe
+      lang_re_str += ")";
+      var lang_re = new RegExp(lang_re_str, "g");
+      var split = etym.split(lang_re);
+      // replace "literally."
+      var literally_re = /literally,$/g;
+      for (var i = split.length - 1; i >= 0; i--) {
+        if (literally_re.test(split[i]) && i < split.length - 1) {
+          split.splice(i, 2, split[i] + " " + split[i + 1]);
+        }
+      }
+      // separate out connections
+      var connect_re = /[,;]\s(?=from|akin to)/g;
+      for (var i = split.length - 1; i >= 0; i--) {
+        var subsplit = split[i].split(connect_re);
+        if (subsplit.length == 2) {
+          split.splice(i, 1, subsplit[0], subsplit[1]);
+        }
+      }
+      console.log("path", split);
+
+      // add origins
+      if (origins.length > 0) {
+        for (var i = 0; i < origins.length; i++) {
+          var current_data = [];
+          for (var j = 0; j < origins.length; j++) {
+            current_data.push(origins[j][1]);
+            current_data.push(origins[j][2]);
+            if (i == j) { // size
+              current_data.push(0.2);
+            } else {
+              current_data.push(0.05);
+            }
+          }
+          globe.addData(current_data, {format: "magnitude", name: origins[i][0], animated: true});
+        }
       }
     }
 
     // create globe
     globe.createPoints();
-    settime(globe, 0)();
+    if (origins.length > 0) {
+      settime(globe, 0)();
+    }
     globe.animate();
 
   }

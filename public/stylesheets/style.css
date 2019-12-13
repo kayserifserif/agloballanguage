@@ -48,28 +48,41 @@ body {
 }
 
 #timeline {
-  width: auto;
   position: absolute;
-  right: 20px;
-  top: 63px;
-
-  background-color: rgba(0,0,0,0.2);
-
-  border-top: 1px solid rgba(255,255,255,0.4);
+  width: 100%;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#words,
+#languages {
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#words {
+  border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+.time,
+.word {
+  display: flex;
+  justify-content: center;
+  font: 16px Georgia;
+  line-height: 26px;
+  height: 50px;
+  text-align: center;
+  float: left;
+  width: 150px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
 }
 
 .time {
-  font: 16px Georgia;
-  line-height: 26px;
-  height: 30px;
-  text-align: center;
-  float: left;
-  width: 90px;
-  color: rgba(255, 255, 255, 0.4);
-
-  cursor: pointer;
-  -webkit-transition: all 0.1s ease-out;
+  align-items: flex-end;
 }
 
 .time:hover, .time.active {
