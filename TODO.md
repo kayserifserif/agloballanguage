@@ -3,6 +3,8 @@
 ## Fixes
 - More comprehensive parsing of language origins and words stages
 - Move globe down out of the way
+- Fix activation of bars
+- Prevent overflow of word spans
 
 ## Features
 - Automatic animation moving through the etymological stages
