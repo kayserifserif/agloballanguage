@@ -5,6 +5,8 @@
 - Move globe down out of the way
 - Fix activation of bars
 - Prevent overflow of word spans
+- Allow versions of languages (e.g. Medieval Latin as well as Latin)
+- Use first entry instead of entry with longest etymology or oldest date
 
 ## Features
 - Automatic animation moving through the etymological stages
