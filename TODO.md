@@ -10,6 +10,7 @@
 - Automatic animation moving through the etymological stages
 - Connecting lines between points on the globe
 - Suggestions of words with interesting etymologies
+- Context about historical events that enabled the words to travel and evolve
 - Record (clearable) of searched words to see them in context on the timeline
 
 ## UI
