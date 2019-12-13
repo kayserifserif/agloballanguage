@@ -92,6 +92,7 @@ function getEntries(body, word_input) {
       // year
       if (entry.date) {
         var date_str = entry.date.split(",")[0]; // before date sense
+        entry.date_str = date_str;
         var date_word = date_str.match(/\d+[^ ]*/g)[0]; // word containing date
         var year = Number(date_word); // try converting to number
         if (isNaN(year)) { // set to middle of century

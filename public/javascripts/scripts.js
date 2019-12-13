@@ -1,6 +1,6 @@
 const timeline_start = 1100;
 const timeline_end = 2000;
-var date = 2000;
+var year = 2000;
 var date_el;
 var date_x;
 
@@ -34,8 +34,8 @@ window.onload = function() {
     // if no etym, get oldest entry
     if (etym === "") {
       for (var i = 0; i < my_entries.length; i++) {
-        if (my_entries[i].year < date) {
-          date = my_entries[i].year;
+        if (my_entries[i].year < year) {
+          year = my_entries[i].year;
           entry_num = i;
         }
       }
@@ -86,7 +86,8 @@ window.onload = function() {
         var word_el = document.createElement("span");
         word_el.id = "word" + (i + 1);
         word_el.classList.add("word");
-        word_el.append(document.createTextNode(words[i]));
+        // word_el.append(document.createTextNode(words[i]));
+        word_el.innerHTML = words[i];
         words_div.append(word_el);
       }
 
@@ -167,17 +168,18 @@ window.onload = function() {
     }
 
     // mark date on timeline
-    date = my_entries[entry_num].year;
+    year = my_entries[entry_num].year;
     var timeline = document.getElementById("timeline");
     date_el = null;
     date_x = null;
-    if (date) {
+    if (year) {
       timeline.style.visibility = "visible";
       date_x = (
-        (date - timeline_start) / (timeline_end - timeline_start))
+        (year - timeline_start) / (timeline_end - timeline_start))
         * window.innerWidth;
       date_el = document.createElement("span");
-      date_el.append(document.createTextNode(date + ""));
+      // date_el.append(document.createTextNode(date + ""));
+      date_el.append(document.createTextNode(my_entries[entry_num].date_str));
       date_el.id = "date_marker";
       date_el.style.left = date_x + "px";
       timeline.append(date_el);
@@ -191,7 +193,7 @@ window.onload = function() {
 window.addEventListener("resize", function() {
   if (date_el && date_x) {
     date_x = (
-      (date - timeline_start) / (timeline_end - timeline_start))
+      (year - timeline_start) / (timeline_end - timeline_start))
       * window.innerWidth;
     date_el.style.left = date_x + "px";
   }
