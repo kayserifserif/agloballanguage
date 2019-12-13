@@ -1,3 +1,6 @@
+const timeline_start = 1100;
+const timeline_end = 2000;
+
 window.onload = function() {
   if (!Detector.webgl) {
     Detector.addGetWebGLMessage();
@@ -31,12 +34,17 @@ window.onload = function() {
     }
     console.log("origins", origins);
 
+    var stages = document.getElementById("stages");
+
     if (origins.length > 0) {
+
+      stages.style.visibility = "visible";
     
       // populate times
       var times = [];
       var language_div = document.getElementById("languages");
-      for (var i = origins.length - 1; i >= 0; i--) {
+      // for (var i = origins.length - 1; i >= 0; i--) {
+      for (var i = 0; i < origins.length; i++) {
         var num = i + 1;
         var lang = origins[i][0];
         times.push(num + "");
@@ -127,25 +135,34 @@ window.onload = function() {
           globe.addData(current_data, {format: "magnitude", name: origins[i][0], animated: true});
         }
       }
+
+      // create globe
+      globe.createPoints();
+      if (origins.length > 0) {
+        settime(globe, 0)();
+      }
+      globe.animate();
+
+    } else {
+      stages.style.visibility = "hidden";
     }
 
     // mark date on timeline
     var date = my_entries[entry_num].year;
-    console.log(date);
-    var date_x = (date / 2020) * window.innerWidth;
-    var date_el = document.createElement("span");
-    date_el.append(document.createTextNode(date + ""));
-    date_el.id = "date_marker";
-    date_el.style.left = date_x + "px";
     var timeline = document.getElementById("timeline");
-    timeline.append(date_el);
-
-    // create globe
-    globe.createPoints();
-    if (origins.length > 0) {
-      settime(globe, 0)();
+    if (date) {
+      timeline.style.visibility = "visible";
+      var date_x = (
+        (date - timeline_start) / (timeline_end - timeline_start))
+        * window.innerWidth;
+      var date_el = document.createElement("span");
+      date_el.append(document.createTextNode(date + ""));
+      date_el.id = "date_marker";
+      date_el.style.left = date_x + "px";
+      timeline.append(date_el);
+    } else {
+      timeline.style.visibility = "hidden";
     }
-    globe.animate();
 
   }
 }
