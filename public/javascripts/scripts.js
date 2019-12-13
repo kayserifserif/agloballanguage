@@ -1,7 +1,11 @@
 const timeline_start = 1100;
 const timeline_end = 2000;
+var date;
+var date_el;
+var date_x;
 
 window.onload = function() {
+
   if (!Detector.webgl) {
     Detector.addGetWebGLMessage();
   } else {
@@ -148,14 +152,16 @@ window.onload = function() {
     }
 
     // mark date on timeline
-    var date = my_entries[entry_num].year;
+    date = my_entries[entry_num].year;
     var timeline = document.getElementById("timeline");
+    date_el = null;
+    date_x = null;
     if (date) {
       timeline.style.visibility = "visible";
-      var date_x = (
+      date_x = (
         (date - timeline_start) / (timeline_end - timeline_start))
         * window.innerWidth;
-      var date_el = document.createElement("span");
+      date_el = document.createElement("span");
       date_el.append(document.createTextNode(date + ""));
       date_el.id = "date_marker";
       date_el.style.left = date_x + "px";
@@ -166,3 +172,12 @@ window.onload = function() {
 
   }
 }
+
+window.addEventListener("resize", function() {
+  if (date_el && date_x) {
+    date_x = (
+      (date - timeline_start) / (timeline_end - timeline_start))
+      * window.innerWidth;
+    date_el.style.left = date_x + "px";
+  }
+});
