@@ -8,9 +8,22 @@ router.all('/:word_input', function(req, res) {
   var url = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/" +
     req.params.word_input + "?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1";
   request(url, function(error, response, body) {
-    var entries = getEntries(body, req.params.word_input);
-    console.log(entries);
-    res.render('word', { entries });
+    var valid = true;
+    if (body.length <= 2) {
+      valid = false;
+    } else {
+      var json = JSON.parse(body);
+      if (typeof json[0] === "string") {
+        valid = false;
+      }
+    }
+    if (valid) {
+      var entries = getEntries(body, req.params.word_input);
+      console.log(entries);
+      res.render('word', { entries });
+    } else {
+      res.render('error');
+    }
   });
 })
 
@@ -45,7 +58,6 @@ function getEntries(body, word_input) {
             // check if language already exists (e.g. Late Latin and Latin)
             var unique = true;
             for (var existing_lang in origins) {
-              console.log(existing_lang, existing_lang.includes(language));
               if (existing_lang.includes(language)) {
                 unique = false;
               }
