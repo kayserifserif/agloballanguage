@@ -1,21 +1,21 @@
 {
-  "name": "etymologee",
+  "name": "agloballanguage",
   "version": "1.0.0",
-  "description": "Explore etymologies of the English language!",
+  "description": "An interactive visualisation tool exploring the etymological history of the English language.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bookwormgirl910/etymologee.git"
+    "url": "git+https://github.com/whykatherine/agloballanguage.git"
   },
   "author": "Katherine Yang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bookwormgirl910/etymologee/issues"
+    "url": "https://github.com/whykatherine/agloballanguage/issues"
   },
-  "homepage": "https://github.com/bookwormgirl910/etymologee#readme",
+  "homepage": "https://agloballanguage.herokuapp.com",
   "dependencies": {
     "body-parser": "^1.18.3",
     "concat-stream": "^2.0.0",
