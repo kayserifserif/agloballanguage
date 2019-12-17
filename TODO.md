@@ -9,6 +9,7 @@
 - Fix pairing of language and word stage
 - Show globe on homepage
 - Make timeline more visible
+- Add fallbacks (WebGL on iOS?)
 
 ## Features
 - Automatic animation moving through the etymological stages
