@@ -13,29 +13,89 @@ html, body {
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #000;
+  background-color: #F7F8F3;
+  color: #402100;
+  font-family: "Alegreya", serif;
+  font-size: 1.1em;
+  line-height: 1.5;
 }
+
+a {
+  text-decoration: none;
+  color: #3285CA;
+  border-bottom: 1px currentColor;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  padding: 1em;
+  display: flex;
+  z-index: 1;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#home {
+  margin-right: 1.5em;
+}
+
+#about {
+  max-width: 100%;
+  margin: 20px;
+  padding: 1em;
+}
+  @media(min-width: 1000px) {
+    #about {
+      width: 40%;
+      margin: 150px;
+    }
+  }
 
 .search,
 .entries {
   position: absolute;
-  left: 50px;
   z-index: 1;
-  background-color: #fff;
-  opacity: 0.9;
 }
 
 .search {
-  top: 120px;
-  padding: 20px 30px 40px;
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 412px;
+  margin: auto;
+  box-shadow: 1px 1px 10px rgba(94, 53, 11, 0.1);
+}
+
+.search input {
+  padding: 1em;
+  font-family: "Alegreya", serif;
+  font-size: 1.2em;
+  border: 0;
+}
+
+#word-input {
+  background-color: #ece5d4;
+  color: #402100;
+}
+
+#submit {
+  background-color: #402100;
+  color: #ece5d4;
+  font-weight: bold;
 }
 
 .entries {
-  top: 320px;
+  top: 0;
+  bottom: 75px;
+  left: 50px;
   width: 400px;
   height: 400px;
   padding: 20px 30px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
   overflow: scroll;
 }
 
@@ -48,15 +108,19 @@ body {
 }
 
 #timeline {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   height: 20px;
-  background-color: #16466f;
-  border-bottom: 1px solid #3285CA;
+  background-color: #402100;
+  border-bottom: 2px solid #e64025;
 }
 
 .timeline-label {
   position: absolute;
+  bottom: -1px;
+  padding: 0 5px;
   display: inline-block;
-  padding: 3px;
   color: #fff;
   font-size: 14px;
 }
@@ -67,21 +131,21 @@ body {
 
 #date_marker {
   position: absolute;
-  color: #fff;
+  bottom: 0;
 }
 
-#date_marker::before {
+#date_marker::after {
   content: "";
-  display: block;
-  height: 20px;
   width: 5px;
-  margin: 0 auto 10px;
-  background-color: #00FFFF;
+  height: 18px;
+  margin: 0 auto;
+  display: block;
+  background-color: #E64025;
 }
 
 #stages {
   position: absolute;
-  top: 40px;
+  bottom: 50px;
   width: 100%;
   padding: 10px;
   display: flex;
@@ -92,23 +156,26 @@ body {
 #languages {
   margin: auto;
   padding: 20px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(232, 221, 200, 0.7);
 }
 
 #words {
-  border-top: 1px solid rgba(255,255,255,0.4);
+  border-top: 1px solid #40210082;
+}
+
+#languages {
+  font-family: "Alegreya SC", serif;
 }
 
 .time,
 .word {
-  font: 16px Georgia;
-  line-height: 26px;
-  height: 50px;
-  text-align: center;
   float: left;
   width: 150px;
-  color: rgba(255, 255, 255, 0.4);
+  height: 50px;
+  font-size: 16px;
+  line-height: 26px;
   text-align: center;
+  color: rgba(77, 42, 11, 0.7);
   cursor: pointer;
   -webkit-transition: all 0.1s ease-out;
 }
@@ -121,5 +188,5 @@ body {
 
 .time:hover, .time.active {
   font-size: 23px;
-  color: #fff;
+  color: rgb(77, 42, 11);
 }

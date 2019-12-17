@@ -4,6 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     title A Global Language
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://fonts.googleapis.com/css?family=Alegreya+SC:500|Alegreya:400,400i,700&display=swap" rel="stylesheet")
     script(src="/javascripts/three/ThreeWebGL.js")
     script(src="/javascripts/three/ThreeExtras.js")
     script(src="/javascripts/three/RequestAnimationFrame.js")
@@ -16,11 +17,16 @@ html(lang="en")
     script(src="/javascripts/scripts.js")
 
 body
+  
+  header(id="header")
+    nav
+      a(href="/" id="home")
+        b A Global Language
+      a(href="/about") About
 
   form(method="POST" action="/" class="search")
-    h1 A Global Language
-    input(type="text" name="word_input")
-    input(type="submit" value="Look up")
+    input(type="text" name="word_input" id="word-input")
+    input(type="submit" value="Look up" id="submit")
 
   div(class="entries")
     each entry in entries
