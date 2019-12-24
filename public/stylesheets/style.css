@@ -16,9 +16,15 @@ body {
   background-color: #F7F8F3;
   color: #402100;
   font-family: "Alegreya", serif;
-  font-size: 1.1em;
+  /* font-size: 1em; */
+  font-size: 11px;
   line-height: 1.5;
 }
+  @media(min-width: 1000px) {
+    body {
+      font-size: 1.1em;
+    }
+  }
 
 a {
   text-decoration: none;
@@ -61,13 +67,20 @@ a {
 }
 
 .search {
-  top: 100px;
+  /* top: 100px; */
+  top: 10%;
   left: 0;
   right: 0;
-  width: 412px;
+  /* width: 412px; */
+  width: 256px;
   margin: auto;
   box-shadow: 1px 1px 10px rgba(94, 53, 11, 0.1);
 }
+  @media(min-width: 1000px) {
+    .search {
+      width: 412px;
+    }
+  }
 
 .search input {
   padding: 1em;
@@ -88,16 +101,29 @@ a {
 }
 
 .entries {
-  top: 0;
-  bottom: 75px;
-  left: 50px;
-  width: 400px;
-  height: 400px;
-  padding: 20px 30px;
+  /* top: 0; */
+  top: 50%;
+  /* bottom: 75px; */
+  bottom: 50%;
+  /* left: 50px; */
+  left: 10%;
+  width: 200px;
+  max-width: 35%;
+  height: 200px;
+  /* padding: 20px 30px; */
+  padding: 10px 20px;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.8);
   overflow: scroll;
 }
+  @media(min-width: 1000px) {
+    .entries {
+      width: 400px;
+      height: 400px;
+      padding: 20px 30px;
+      left: 50px;
+    }
+  }
 
 #container {
   position: absolute;
@@ -155,9 +181,16 @@ a {
 #words,
 #languages {
   margin: auto;
-  padding: 20px;
+  /* padding: 20px; */
+  padding: 10px;
   background-color: rgba(232, 221, 200, 0.7);
 }
+  @media(min-width: 1000px) {
+    #words,
+    #languages {
+      padding: 20px;
+    }
+  }
 
 #words {
   border-top: 1px solid #40210082;
@@ -170,15 +203,25 @@ a {
 .time,
 .word {
   float: left;
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 26px;
+  /* width: 150px; */
+  width: 50px;
+  /* height: 50px; */
+  height: 2em;
+  /* font-size: 16px; */
+  /* line-height: 26px; */
+  line-height: 1;
   text-align: center;
   color: rgba(77, 42, 11, 0.7);
   cursor: pointer;
   -webkit-transition: all 0.1s ease-out;
 }
+  @media(min-width: 1000px) {
+    .time,
+    .word {
+      width: 150px;
+      height: 50px;
+    }
+  }
 
 .time {
   display: flex;
@@ -186,7 +229,14 @@ a {
   justify-content: center;
 }
 
-.time:hover, .time.active {
-  font-size: 23px;
+.time:hover,
+.time.active {
+  font-size: 1.3em;
   color: rgb(77, 42, 11);
 }
+  @media(min-width: 1000px) {
+    .time:hover,
+    .time.active {
+      font-size: 23px;
+    }
+  }
