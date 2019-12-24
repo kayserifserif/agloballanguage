@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -79,6 +81,7 @@ a {
   padding: 1em;
   font-family: "Alegreya", serif;
   border: 0;
+  border-radius: 0;
 }
   @media (min-width: 1000px) {
     .search input {
@@ -146,6 +149,8 @@ a {
   -webkit-line-clamp: 2;
   box-orient: vertical;
   -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
 }
   @media (min-width: 1000px) {
     #definition {
@@ -165,6 +170,7 @@ a {
   /* padding: 20px 30px; */
   padding: 10px 20px;
   margin: auto;
+  background-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.8);
   overflow: scroll;
 }
@@ -235,6 +241,7 @@ a {
   margin: auto;
   /* padding: 20px; */
   padding: 10px;
+  /* background-color: rgb(232, 221, 200); */
   /* background-color: rgba(232, 221, 200, 0.7); */
   display: flex;
 }
@@ -259,9 +266,12 @@ a {
   height: 50px;
   line-height: 1;
   text-align: center;
+  color: rgb(77, 42, 11);
   color: rgba(77, 42, 11, 0.7);
   cursor: pointer;
   -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
 }
   @media (min-width: 1000px) {
     .time,
