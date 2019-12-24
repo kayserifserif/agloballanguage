@@ -29,23 +29,27 @@ body
     input(type="text" name="word_input" id="word-input")
     input(type="submit" value="Look up" id="submit")
 
-  div(class="entries")
-    each entry in entries
-      div(class="entry")
-        h2= entry.word
-        p(class="pos")= entry.pos
-        div(class="defs")
-          each d in entry.def
-            p(class="def")!= d
-        p(class="etym")!= entry.etym
-        p(class="date")= entry.date
+  //- div(class="entries")
+  //-   each entry in entries
+  //-     div(class="entry")
+  //-       h2= entry.word
+  //-       p(class="pos")= entry.pos
+  //-       div(class="defs")
+  //-         each d in entry.def
+  //-           p(class="def")!= d
+  //-       p(class="etym")!= entry.etym
+  //-       p(class="date")= entry.date
+
+  div(id="result")
+    h2(id="word")= entries[0].word
+    p(id="definition")!= entries[0].def[0]
   
   div(id="container")
-  
-  div(id="timeline")
-    span(class="timeline-label") 1100
-    span(class="timeline-label") 2000
 
   div(id="stages")
     div(id="languages")
     div(id="words")
+  
+  div(id="timeline")
+    span(class="timeline-label") 1100
+    span(class="timeline-label") 2000
