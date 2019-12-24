@@ -28,9 +28,9 @@ body {
   }
 
 a {
-  text-decoration: none;
   color: #3285CA;
   border-bottom: 1px currentColor;
+  text-decoration: none;
 }
 
 #header {
@@ -39,10 +39,6 @@ a {
   padding: 1em;
   display: flex;
   z-index: 1;
-}
-
-#header a {
-  text-decoration: none;
 }
 
 #home {
@@ -208,6 +204,9 @@ a {
   display: inline-block;
   color: #fff;
 }
+  @media (min-width: 1000px) {
+    bottom: -2px;
+  }
 
 .timeline-label:nth-of-type(2) {
   right: 0;
@@ -239,7 +238,6 @@ a {
 #words,
 #languages {
   margin: auto;
-  /* padding: 20px; */
   padding: 10px;
   /* background-color: rgb(232, 221, 200); */
   /* background-color: rgba(232, 221, 200, 0.7); */
