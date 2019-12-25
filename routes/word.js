@@ -4,35 +4,32 @@ const request = require('request');
 const fs = require('fs');
 const origin_coords = require('../data/origin_coords.json')
 
+var entries = [];
+
 router.all('/:word_input', function(req, res) {
   var url = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/" +
     req.params.word_input + "?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1";
+  entries = [];
   request(url, function(error, response, body) {
-    var valid = true;
-    if (body.length <= 2) {
-      valid = false;
-    } else {
-      var json = JSON.parse(body);
-      if (typeof json[0] === "string") {
-        valid = false;
-      }
-    }
-    if (valid) {
-      var entries = getEntries(body, req.params.word_input);
+    if (getEntries(body, req.params.word_input)) {
       console.log(entries);
       res.render('word', { entries });
     } else {
-      res.render('error');
+      res.render('error', { word: req.params.word_input });
     }
   });
 })
 
 function getEntries(body, word_input) {
-  var entries = [];
   var json = JSON.parse(body);
+  if (body.length <= 2 || typeof json[0] === "string") {
+    return false;
+  }
+  var isMatchFound = false;
   for (var entry_num = 0; entry_num < json.length; entry_num++) {
     var id = /[^:0-9]*/g.exec(json[entry_num].meta.id);
     if (id && id[0].toLowerCase() === word_input.toLowerCase()) {
+      isMatchFound = true;
       var entry = {};
 
       entry.word = id[0];
@@ -116,7 +113,11 @@ function getEntries(body, word_input) {
       entries.push(entry);
     }
   }
-  return entries;
+  if (!isMatchFound) {
+    return false;
+  }
+  // success
+  return true;
 }
 
 module.exports = router;
