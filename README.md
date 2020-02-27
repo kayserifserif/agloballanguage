@@ -2,6 +2,8 @@
 
 An interactive visualisation tool exploring the etymological history of the English language.
 
+![Webpage showing results for "banana", with three points on the globe, a section of languages, and a historical timeline](https://github.com/whykatherine/agloballanguage/blob/master/documentation/Screen Shot 2019-12-24 at 11.14.48 PM.jpg)
+
 ### Background
 
 Etymology is often thought of as a topic for scholars of “dead languages”. In some cases, it can certainly be very dry and difficult to understand without having extensively studied the many languages of which the modern English language is an amalgamation. In other cases, however, the story behind, say, how a word travels from East Asia to North America and comes to mean something quite different, can be fascinating, for both language enthusiasts and casual speakers of a language.
