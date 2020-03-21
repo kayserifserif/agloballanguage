@@ -72,11 +72,17 @@ function getEntry(body, input, sense) {
       entry.etym = entry.etym.replace(/{\/it}/g, "<\/i>");
       // more at
       entry.etym = entry.etym.replace(/{ma}/g, "—more at ");
-      entry.etym = entry.etym.replace(/{mat\|(-?\w+-?)\|}/g, "<a href=\"/word/$1\">$1</a>");
+      entry.etym = entry.etym.replace(/{mat\|(-?\w+-?)(?::(\d))?\|}/g,
+        (match, p1, p2) => {
+          if (p2) {
+            return "<a href=\"/word/" + p1 + "/" + p2 + "\">" + p1 + " entry " + p2 + "</a>"
+          } else {
+            return "<a href=\"/word/" + p1 + "\">" + p1 + "</a>";
+          }
+        });
       entry.etym = entry.etym.replace(/{\/ma}/g, "");
       // etymology link
       entry.etym = entry.etym.replace(/{et_link\|(-?\w+-?)(?::(\d))?\|(?:(-?\w+-?)(?::(\d))?)?}/g,
-        // "(<a href=\"/word/$1/$2\">$1 entry $2</a>)");
         (match, p1, p2) => {
           if (p2) {
             return "(<a href=\"/word/" + p1 + "/" + p2 + "\">" + p1 + " entry " + p2 + "</a>)";
