@@ -18,10 +18,15 @@ var router = express.Router();
 // https://jaketrent.com/post/https-redirect-node-heroku/
 if (process.env.NODE_ENV === "production") {
   router.use((req, res, next) => {
-    if (req.header("x-forwarded-proto") !== "https") {
-      res.redirect(`https://${req.header('host')}${req.url}`);
+    // if (req.header("x-forwarded-proto") !== "https") {
+    //   res.redirect(`https://${req.header('host')}${req.url}`);
+    // }
+    // next();
+    if (req.secure) {
+      next();
+    } else {
+      res.redirect("https://" + req.headers.host + req.url);
     }
-    next();
   });
 } 
 
