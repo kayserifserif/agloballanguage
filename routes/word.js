@@ -44,6 +44,10 @@ function getEntries(body, word_input) {
         // italics
         entry.etym = entry.etym.replace(/{it}/g, "<i>");
         entry.etym = entry.etym.replace(/{\/it}/g, "<\/i>");
+        // more at
+        entry.etym = entry.etym.replace(/{ma}/g, "—more at ");
+        entry.etym = entry.etym.replace(/{mat\|(-?\w+-?)\|}/g, "<a href=\"$1\">$1</a>");
+        entry.etym = entry.etym.replace(/{\/ma}/g, "");
       }
 
       // coords
