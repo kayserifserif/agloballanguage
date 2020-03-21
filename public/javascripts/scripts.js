@@ -21,7 +21,9 @@ var relations = [
   "whence also", "; akin to", "; probably akin to"
 ];
 var connections = [
-  "borrowed from", "probably from", "perhaps from", "from", "going back to", "of"
+  "borrowed from", "probably from", "perhaps from", "from", "going back to", "alteration of",
+  "perhaps all going back to a dissimilated form of",
+  "of",
 ];
 var trimmed_origins = {};
 
