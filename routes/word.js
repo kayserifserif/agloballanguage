@@ -50,8 +50,7 @@ function getEntries(body, word_input) {
       if (entry.etym) {
         var origins = {};
         for (var language in origin_coords) {
-          var regexp = new RegExp(language);
-          if (regexp.test(entry.etym)) {
+          if (entry.etym.search(language) != -1) {
             // check if language already exists (e.g. Late Latin and Latin)
             var unique = true;
             for (var existing_lang in origins) {
@@ -60,15 +59,13 @@ function getEntries(body, word_input) {
               }
             }
             if (unique) {
-              var origin = {
-                "lat": origin_coords[language].lat,
-                "lon": origin_coords[language].lon
-              };
-              origins[language] = origin;
+              origins[language] = Object.values(origin_coords[language]);
             }
           }
         }
         entry.origins = origins;
+      } else {
+        entry.origins = {};
       }
       
       // date
