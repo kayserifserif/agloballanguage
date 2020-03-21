@@ -51,16 +51,7 @@ function getEntries(body, word_input) {
         var origins = {};
         for (var language in origin_coords) {
           if (entry.etym.search(language) != -1) {
-            // check if language already exists (e.g. Late Latin and Latin)
-            var unique = true;
-            for (var existing_lang in origins) {
-              if (existing_lang.includes(language)) {
-                unique = false;
-              }
-            }
-            if (unique) {
-              origins[language] = Object.values(origin_coords[language]);
-            }
+            origins[language] = Object.values(origin_coords[language]);
           }
         }
         entry.origins = origins;
