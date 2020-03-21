@@ -18,7 +18,7 @@ var langDescs = [
   "(Australian aboriginal language of northern Queensland)"
 ];
 var relations = [
-  "whence also", "; akin to", "; probably akin to"
+  "whence also", "; akin to", "; probably akin to", "whence"
 ];
 var connections = [
   "borrowed from", "probably from", "perhaps from", "from", "going back to", "alteration of",
@@ -129,6 +129,10 @@ function parseEtym(entry, languages) {
     var language = entry.etym.substring(pair[0], pair[1]).trim();
     stage.push(language);
     var word = entry.etym.substring(pair[1]).trim();
+    // delete beginning comma
+    if (word.startsWith(",")) {
+      word = word.substring(1).trim();
+    }
     // delete language descriptions
     for (var langDesc of langDescs) {
       word = word.replace(langDesc, "").trim();
