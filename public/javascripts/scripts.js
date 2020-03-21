@@ -1,6 +1,6 @@
-// api response for word input is passed through as my_entries
-// my_entries is an array in which each element is an entry
-// entries contain:
+// api response for word input is passed through as entry
+// entry is an array in which each element is an entry
+// entry contains:
 // date     (string)            detailed description of date
 // date_str (string)            isolated date parsed from above
 //                                (e.g. 1350 or 14th century)
@@ -45,8 +45,8 @@ function parseEtym(entry, languages) {
     match_indices.push(startEnd);
   }
   // use indices to parse languages and words into array
-  console.log(entry.word);
-  console.log(entry.etym);
+  // console.log(entry.word);
+  // console.log(entry.etym);
   var etym_parsed = [];
   var isParsing = true;
   for (var i = 0; i < match_indices.length - 1; i++) {
@@ -176,8 +176,7 @@ function createGraphics() {
   var container = document.getElementById("container");
   var globe = new DAT.Globe(container);
 
-  // get first entry
-  var entry = my_entries[0];
+  // check if origins exist
   var hasOrigins = Object.keys(entry.origins).length > 0;
 
   // populate stages
@@ -190,7 +189,7 @@ function createGraphics() {
     // parse etymology
     var languages = [];
     etym_parsed = parseEtym(entry, languages);
-    console.log(etym_parsed);
+    // console.log(etym_parsed);
 
     // insert data into page
     var connectionContainer = document.getElementById("connections");

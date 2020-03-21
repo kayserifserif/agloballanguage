@@ -13,8 +13,8 @@ html(lang="en")
     script(src="/javascripts/tween.js")
     script(src="/javascripts/globe.js")
     script.
-      var my_entries = !{JSON.stringify(entries)};
-      console.log("entries", my_entries);
+      var entry = !{JSON.stringify(entry)};
+      console.log("entry", entry);
     script(src="/javascripts/scripts.js")
 
 body
@@ -41,8 +41,8 @@ body
   //-       p(class="date")= entry.date
 
   div(id="result")
-    h2(id="word")= entries[0].word
-    p(id="definition")!= entries[0].def[0]
+    h2(id="word")= entry.word
+    p(id="definition")!= entry.def[0]
   
   div(id="container")
 
