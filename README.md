@@ -2,7 +2,7 @@
 
 An interactive visualisation tool exploring the etymological history of the English language.
 
-![Webpage showing results for "banana", with three points on the globe, a section of languages, and a historical timeline](https://github.com/whykatherine/agloballanguage/blob/master/documentation/Screen%20Shot%202019-12-24%20at%2011.14.48%20PM.jpg)
+![Webpage showing results for "banana", with three points on the globe, a section of languages, and a historical timeline](documentation/Screen%20Shot%202019-12-24%20at%2011.14.48%20PM.jpg)
 
 ### Background
 
