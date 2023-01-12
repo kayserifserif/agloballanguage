@@ -16,6 +16,7 @@ router.all("/:word_input", (req, res) => {
 router.all('/:word_input/:sense', (req, res) => {
   console.log(req.params);
   var input = req.params.word_input;
+  // https://www.dictionaryapi.com/api/v3/references/collegiate/json/typhoon?key=387115b8-0a9e-464f-8f56-1e4a6f46f7f1";
   var url = api + input + "?key=" + key;
   var sense = parseInt(req.params.sense);
   // if sense is not a number
