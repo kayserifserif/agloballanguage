@@ -126,6 +126,7 @@ a {
   line-height: 1;
   opacity: 0.65;
   z-index: 1;
+  pointer-events: none;
 }
   @media (min-width: 1000px) {
     #result {
@@ -252,6 +253,10 @@ a {
   /* background-color: rgb(232, 221, 200); */
   /* background-color: rgba(232, 221, 200, 0.7); */
   display: flex;
+  flex-direction: row-reverse;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
   @media (min-width: 1000px) {
     #words,
@@ -281,7 +286,6 @@ a {
 .time .language,
 .word {
   color: rgba(77, 42, 11, 0.7);
-  cursor: pointer;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
@@ -300,15 +304,14 @@ a {
 
 .time:hover .language,
 .time.active .language {
-  font-size: 1.3em;
+  font-size: 1.05em;
   color: rgb(77, 42, 11);
 }
 
 .connection {
   position: absolute;
-  /* top: -24px; */
   top: -10px;
-  right: 0;
+  left: 0;
   font-size: 0.8em;
 }
 
@@ -323,13 +326,13 @@ a {
 .connection::before {
   width: 11px;
   height: 11px;
-  background-image: url("/images/connect-end.svg");
+  background-image: url("/images/connect-start-flip.svg");
   left: -15px;
 }
 
 .connection::after {
   width: 10px;
   height: 10px;
-  background-image: url("/images/connect-start.svg");
+  background-image: url("/images/connect-end-flip.svg");
   right: -14px;
 }
