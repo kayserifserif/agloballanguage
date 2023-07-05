@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whykatherine/agloballanguage.git"
+    "url": "git+https://github.com/kayserifserif/agloballanguage.git"
   },
   "author": "Katherine Yang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/whykatherine/agloballanguage/issues"
+    "url": "https://github.com/kayserifserif/agloballanguage/issues"
   },
   "homepage": "https://agloballanguage.herokuapp.com",
   "dependencies": {
