@@ -19,7 +19,7 @@
   "dependencies": {
     "acorn": ">=5.7.4",
     "core-js": "^3.6.4",
-    "express": "^4.19.2",
+    "express": "^4.21.2",
     "pug": "^3.0.1",
     "request": "^2.88.2"
   }
