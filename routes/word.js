@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const request = require('request');
+const request = require('@root/request');
 const fs = require('fs');
 const origin_coords = require('../data/origin_coords.json')
 

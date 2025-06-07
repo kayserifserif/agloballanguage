@@ -17,10 +17,10 @@
   },
   "homepage": "https://agloballanguage.herokuapp.com",
   "dependencies": {
+    "@root/request": "^1.9.2",
     "acorn": ">=5.7.4",
     "core-js": "^3.6.4",
     "express": "^4.21.2",
-    "pug": "^3.0.3",
-    "request": "^2.88.2"
+    "pug": "^3.0.3"
   }
 }
