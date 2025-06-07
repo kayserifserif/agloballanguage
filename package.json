@@ -18,9 +18,8 @@
   "homepage": "https://agloballanguage.herokuapp.com",
   "dependencies": {
     "@root/request": "^1.9.2",
-    "acorn": ">=5.7.4",
-    "core-js": "^3.6.4",
-    "express": "^4.21.2",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
     "pug": "^3.0.3"
   }
 }
