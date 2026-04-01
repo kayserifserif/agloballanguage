@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "An interactive visualisation tool exploring the etymological history of the English language.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
@@ -15,7 +14,6 @@
   "bugs": {
     "url": "https://github.com/kayserifserif/agloballanguage/issues"
   },
-  "homepage": "https://agloballanguage.herokuapp.com",
   "dependencies": {
     "@root/request": "^1.9.2",
     "body-parser": "^2.2.0",
